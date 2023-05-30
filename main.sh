@@ -4,15 +4,15 @@ install_dependencies(){
     sudo apt install equivs
 }
 build_packages(){
-    equivs-build package-all
-    equivs-build package-chrome
-    equivs-build package-lamp-env
-    equivs-build package-java
+    equivs-build ./packages/package-all
+    equivs-build ./packages/package-chrome
+    equivs-build ./packages/package-lamp-env
+    equivs-build ./packages/package-java
     
-    sudo apt install ./package-all_1.0_all
-    sudo apt install ./package-chrome_1.0_all
-    sudo apt install ./package-lamp-env_1.0_all
-    sudo apt install ./package-java_1.0_all
+    sudo apt install ./packages/package-all_1.0_all
+    sudo apt install ./packages/package-chrome_1.0_all
+    sudo apt install ./packages/package-lamp-env_1.0_all
+    sudo apt install ./packages/package-java_1.0_all
 }
 
 install_dependencies
